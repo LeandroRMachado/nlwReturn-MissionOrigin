@@ -11,9 +11,12 @@
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --textButton: hsl(0, 0%, 100%);
+
   --brand-beige: hsl(39, 100%, 97%);
   --border-box: hsl(148, 23%, 89%);
   --bg-light: hsl(180, 14%, 97%);
+  --brand-button-hover: hsl(170, 100%, 14%);
+
 
   font-size: 62.5% /* 1rem = 10px */;
 
@@ -94,6 +97,42 @@ section .content p {
   line-height: 150%;
 
   color: var(--paragraph);
+}
+
+.button {
+  background: var(--primary-color);
+
+  border-radius: 4rem;
+  border: none;
+
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+  
+  text-transform: uppercase;
+  color: var(--textButton);
+  font-size: 1.4rem;
+  font-weight: 700;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--brand-button-hover);
+  transition: background .4s;
+}
+
+.social-links {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 /*===================NAVIGATION===============*/
@@ -211,13 +250,6 @@ body.menu-expanded .menu {
   margin-bottom: 8rem;
 }
 
-.social-links {
-  display: flex;
-  gap: 3.2rem;
-  align-items: center;
-  justify-content: center;
-}
-
 body.menu-expanded .logo,
 body.menu-expanded button {
   position: relative;
@@ -252,6 +284,10 @@ body.menu-expanded button path {
   z-index: -1;
 }
 
+#home .button {
+  margin-inline: auto;
+}
+
 #home p {
   font-size: 1.8rem;
   line-height: 150%;
@@ -259,33 +295,6 @@ body.menu-expanded button path {
   font-weight: 400;
   margin-bottom: 3.2rem;
 }
-
-#home button {
-  background: var(--primary-color);
-
-  border-radius: 4rem;
-  border: none;
-
-  margin-bottom: 6rem;
-
-  height: 6.2rem;
-  width: 26.3rem;
-  
-  
-  text-transform: uppercase;
-  color: var(--textButton);
-  font-size: 1.4rem;
-  font-weight: 700;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 #home img {
   width: 26.4rem;
@@ -363,6 +372,64 @@ body.menu-expanded button path {
 #about .content p {
   margin-top: 2rem;
   margin-bottom: 6rem;
+}
+
+/*====================CONTACT=======================*/
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact .content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  margin-bottom: 3.2rem;
+}
+
+#contact .content li {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+/*====================FOOTER=======================*/
+
+footer {
+  background-color: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+  color: white;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: white;
+}
+
+footer p {
+  color: var(--brand-beige);
+  line-height: 2;
+
+  margin-bottom: 3.2rem;
+}
+
+footer .social-links {
+  justify-content: flex-start;
 }
 
 
