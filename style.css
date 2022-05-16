@@ -764,7 +764,7 @@ footer .social-links {
 
     footer .col-b {
       align-self: center;
-      justify-content: flex-end;
+      justify-self: flex-end;
     }
 
     footer p {
